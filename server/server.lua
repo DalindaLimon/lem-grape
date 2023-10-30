@@ -15,7 +15,6 @@ RegisterNetEvent('grapecounted',cb) ]]--
 end) ]]--
 
 AddEventHandler('addgrape',function(src)   
-   --[[  print("uzumun amk") ]]
     local src = source
     local player = QBCore.Functions.GetPlayer(src)
     TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items['grape'], "add") 
