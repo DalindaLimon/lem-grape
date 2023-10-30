@@ -42,19 +42,19 @@ local function addBlip(coords, text)
     EndTextCommandSetBlipName(blip)
     return blip
 end
- local function checkgrapecount()
+ --[[ local function checkgrapecount()
     TriggerServerEvent('Checkgrape')
     AddEventHandler('grapecounted',function ()
         
     end)
 
- end
+ end ]]--
 
 
 Citizen.CreateThread( function ()
     addBlip(Config.Blips[1].coords,"Üzüm Toplama")
     RegisterNetEvent('addgrape')
-    RegisterNetEvent("Checkgrape")
+   --[[  RegisterNetEvent("Checkgrape") ]]--
     
     
     while true do
@@ -66,7 +66,7 @@ Citizen.CreateThread( function ()
         sleep = false
         DrawText3D(Config.Pick_Grape[counter].coords[1],Config.Pick_Grape[counter].coords[2],Config.Pick_Grape[counter].coords[3],'Üzüm Topla ~g~E~s~')
         if IsControlJustPressed(0,38) then
-            checkgrapecount()
+            --[[ checkgrapecount() ]]--
             QBCore.Functions.Progressbar("Uzum Topla","Üzüm Topluyorsun",5000,false,true,{
                 disableMovement = true,
                 disableCarMovement = true,
