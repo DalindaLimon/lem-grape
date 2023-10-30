@@ -1,10 +1,10 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
 RegisterNetEvent('addgrape')
-RegisterNetEvent("Checkgrape")
-RegisterNetEvent('grapecounted',cb)
+--[[ RegisterNetEvent("Checkgrape")
+RegisterNetEvent('grapecounted',cb) ]]--
 
-AddEventHandler("Checkgrape",function (src)
+--[[ AddEventHandler("Checkgrape",function (src)
     local source = src
     local player = QBCore.Functions.GetPlayer(src)
     local grapecount = player.Functions.GetItemsByName(src,'grape'--[[source, item]])
@@ -12,7 +12,7 @@ AddEventHandler("Checkgrape",function (src)
     TriggerClientEvent('grapecounted',source,grapecount)
     
     
-end)
+end) ]]--
 
 AddEventHandler('addgrape',function(src)   
    --[[  print("uzumun amk") ]]
